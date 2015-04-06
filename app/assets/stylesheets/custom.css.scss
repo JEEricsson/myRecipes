@@ -1,0 +1,75 @@
+$navbar-default-bg: rgba(224,186,79,0.7);
+$light-green: rgba(224,186,79,0.7);
+$navbar-default-color: $light-green;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo{
+    margin-top: 0px;
+    float: left;
+    font-size: 2em;
+    text-transform: uppercase;
+    padding-top: 4px;
+    color: black;
+}
+
+.images{
+   margin-top: 10px;
+}
+
+
+h1{
+    margin-top: 60px;
+    height: 40px;
+    margin-bottom: 25px;
+   -webkit-animation: mymover 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymover 5s infinite;
+}
+
+h2{
+    margin-top: 20px;
+}
+
+
+
+.nav-tabs{
+    float: left;
+    font-size: 1.5em;
+    margin-left: 20px;
+    margin-top: 0px;
+    color: black;
+    
+}
+
+body {
+    paddig-top: 90px;
+}
+
+
+
+.center{
+    text-align: center;
+}
+
+.footer{
+    margin-top:30px;
+    border-top: 1px solid #eaeaea;
+    background-color:rgba(224,186,79,0.7);
+    height:60px;
+}
+
+ 
+   
+
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymover {
+    from {font-size: 0.5em;}
+    to {font-size: 1em;}
+}
+
+@keyframes mymover {
+    from {font-size: 0.5em;}
+    to {font-size: 1em;}
+}
