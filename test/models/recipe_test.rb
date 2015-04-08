@@ -3,13 +3,19 @@ require 'test_helper'
 class RecipeTest < ActiveSupport::TestCase
     
   def setup
-     @recipe = Recipe.new(name: "chicken", summary: "spicy chicken from the own", description: "Add water and cook for 2 hours, enjoy!!") 
+     @chef = Chef.create(chefname: "jean", email: "jean@example.com")
+     @recipe = @chef.recipes.build(name: "chicken", summary: "spicy chicken from the own", description: "Add water and cook for 2 hours, enjoy!!") 
   end
   
   test "recipe should be valid" do
       assert @recipe.valid?
   end
   
+  test "Chef_id should be present" do
+  @recipe.chef_id = nil
+  assert_not @recipe.valid?
+ end
+ 
   test "name should be present" do
       @recipe.name = " "
       assert_not @recipe.valid?
