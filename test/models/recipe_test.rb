@@ -3,8 +3,8 @@ require 'test_helper'
 class RecipeTest < ActiveSupport::TestCase
     
   def setup
-     @chef = Chef.create(chefname: "jean", email: "jean@example.com")
-     @recipe = @chef.recipes.build(name: "chicken", summary: "spicy chicken from the own", description: "Add water and cook for 2 hours, enjoy!!") 
+     @chef = Chef.create(chefname: "Jean", email: "jean@example.com")
+     @recipe = @chef.recipes.build(name: "Beef colona", summary: "Beef surrounded by bread and onion", description: "Cook your beef and bake it in with bread and onions :), enjoy!!") 
   end
   
   test "recipe should be valid" do
