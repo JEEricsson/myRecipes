@@ -1,0 +1,37 @@
+<p>
+    <h1><% @recipe.name %></h1>
+</p>
+
+ <h2 class="center">
+         <%= @recipe.name %>
+         </h2>
+ <div class="row">
+     <div class="col-md-2 col-md-offset-1">
+         <%= gravatar_for @recipe.chef, size: 150 %>
+         <p>
+            Chefname:<%= @recipe.chef.chefname %>
+         </p>
+  
+    </div>
+         
+    
+     <div class="col-md-6 col-md-offset-1">
+       
+         <hr/>
+         <h4><%= @recipe.summary %></h4>
+         
+         <br>
+         <div class="well">
+         <p class="underline">Description:</p>
+        
+           <%= @recipe.description %>
+      
+         </div>
+        
+       
+    
+     </div>
+ </div>
+ 
+ <h5 class="center"><%= link_to 'Return to Recipes', recipes_path, class: "btn btn-success btn-small" %></h5>
+ <h5 class="center"><%= link_to 'Create a new recipe', new_recipe_path, class: "btn btn-success btn-small" %></h5>
