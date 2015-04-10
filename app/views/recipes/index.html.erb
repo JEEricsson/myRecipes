@@ -2,23 +2,29 @@
 <hr/>
 
 <% @recipes.each do |recipes| %>
+<div class="container">
 
-<div class="row">
-    <div class="col-md-2 col-md-offset-1">
-        <section class="chef_info center">
+
+
+    <div class="col-lg-8 col-md-offset-2 well">
+        <section class="chef_info center pull-left">
             <%= gravatar_for recipes.chef, size: 100 %>
             <h5>Chef: <%= recipes.chef.chefname %></h5>
          
         </section>
         
-    </div>
-    <div class="col-lg-5 well">
         <h3><%= link_to recipes.name, recipe_path(recipes) %></h3>
         <p><%= recipes.summary %></p>
         <p>
         <span class='quiet'><small><%= time_ago_in_words(recipes.created_at) %></small></span>
         </p>
+         <p class="image_profile pull-top-right">
+            <%= image_tag(recipes.picture.url, size: "250x130", class: "gravatar") if recipes.picture %>
+        </p>
+        </div>
+       
     </div>
-</div>
+   
 
 <% end %>
+<div> <h5 class="center"><%= link_to 'Create a new recipe', new_recipe_path, class: "btn btn-success btn-small" %></h5></div>

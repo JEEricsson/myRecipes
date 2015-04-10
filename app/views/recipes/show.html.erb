@@ -18,13 +18,16 @@
      <div class="col-md-6 col-md-offset-1">
        
          <hr/>
-         <h4><%= @recipe.summary %></h4>
-         
+         <h4><%= simple_format@recipe.summary %></h4>
+          <div class="show_recipe">
+            <%= image_tag(@recipe.picture.url, size: "250x130", class: "gravatar") if @recipe.picture %>
+        </div>
          <br>
          <div class="well">
          <p class="underline">Description:</p>
         
            <%= @recipe.description %>
+           <%= link_to "Edit recipe", edit_recipe_path, class: "btn btn-small pull-right" %>
       
          </div>
         
@@ -34,4 +37,4 @@
  </div>
  
  <h5 class="center"><%= link_to 'Return to Recipes', recipes_path, class: "btn btn-success btn-small" %></h5>
- <h5 class="center"><%= link_to 'Create a new recipe', new_recipe_path, class: "btn btn-success btn-small" %></h5>
+ <h5 class="center"><%= link_to 'Create a new recipe', new_recipe_path, class: "btn btn-danger btn-small" %></h5>

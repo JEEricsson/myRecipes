@@ -44,7 +44,7 @@ h2{
 
 body {
     margin-top: 90px;
-    background-color: #F4E4C8;
+ 
    
    
 }
@@ -88,7 +88,10 @@ body {
     
 }
 
-
+.chef_info{
+    margin-right: 20px;
+ 
+}
 
 
 input, textarea, select, .uneditable-input{
@@ -101,4 +104,15 @@ margin-bottom: 16px;
 input {
     height: auto;
    
+}
+
+span.picture{
+    margin-top: 12px;
+    input {
+        border: 0;
+    }
+}
+
+.show_recipe{
+    margin: 10px 10px 10px 10px;
 }
