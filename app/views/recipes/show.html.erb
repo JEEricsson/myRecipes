@@ -26,9 +26,17 @@
          <div class="well">
          <p class="underline">Description:</p>
         
-           <%= @recipe.description %>
+           <%= @recipe.description %><br>
+           <div class="pull-left">
+           <%= link_to like_recipe_path(@recipe, like: true), method: :post do %>
+           <i class="glyphicon glyphicon-thumbs-up"></i>&nbsp <%= @recipe.thumps_up_total %>
+           <% end %> &nbsp&nbsp&nbsp
+           <%= link_to like_recipe_path(@recipe, like: false), method: :post do %>
+           <i class="glyphicon glyphicon-thumbs-down"></i>&nbsp <%= @recipe.thumps_down_total %>
+           <% end %>
+          </div>
            <%= link_to "Edit recipe", edit_recipe_path, class: "btn btn-small pull-right" %>
-      
+          
          </div>
         
        

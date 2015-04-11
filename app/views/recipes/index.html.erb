@@ -21,6 +21,14 @@
          <p class="image_profile pull-top-right">
             <%= image_tag(recipes.picture.url, size: "250x130", class: "gravatar") if recipes.picture %>
         </p>
+        <div class="pull-left">
+           <%= link_to like_recipe_path(recipes, like: true), method: :post do %>
+           <i class="glyphicon glyphicon-thumbs-up"></i>&nbsp <%= recipes.thumps_up_total %>
+           <% end %> &nbsp&nbsp&nbsp
+           <%= link_to like_recipe_path(recipes, like: false), method: :post do %>
+           <i class="glyphicon glyphicon-thumbs-down"></i>&nbsp <%= recipes.thumps_down_total %>
+           <% end %>
+          </div>
         </div>
        
     </div>
