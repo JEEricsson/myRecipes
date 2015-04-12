@@ -1,5 +1,7 @@
-<h1 class="center">All Recipes</h1>
+<H1 class="center">All Recipes</H1>
 <hr/>
+
+<%= will_paginate class: "center" %>
 
 <% @recipes.each do |recipes| %>
 <div class="container">
@@ -16,7 +18,8 @@
         <h3><%= link_to recipes.name, recipe_path(recipes) %></h3>
         <p><%= recipes.summary %></p>
         <p>
-        <span class='quiet'><small><%= time_ago_in_words(recipes.created_at) %></small></span>
+        <span class='quiet'><small>Created:&nbsp<%= time_ago_in_words(recipes.created_at) %></small></span><br>
+         <span class='quiet'><small>Updated:&nbsp<%= time_ago_in_words(recipes.updated_at) %></small></span>
         </p>
          <p class="image_profile pull-top-right">
             <%= image_tag(recipes.picture.url, size: "250x130", class: "gravatar") if recipes.picture %>
@@ -36,3 +39,5 @@
 
 <% end %>
 <div> <h5 class="center"><%= link_to 'Create a new recipe', new_recipe_path, class: "btn btn-success btn-small" %></h5></div>
+
+<%= will_paginate class: "center" %>
