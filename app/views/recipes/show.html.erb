@@ -3,7 +3,7 @@
  
  <div class="row">
      <div class="col-md-2 col-md-offset-1">
-         <%= gravatar_for @recipe.chef, size: 150 %>
+         <%= link_to gravatar_for(@recipe.chef, size: 150), chef_path(@recipe.chef) %>
          <p>
             Chefname:<%= @recipe.chef.chefname %>
          </p>
