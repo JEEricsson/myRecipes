@@ -1,7 +1,7 @@
-<H1 class="center">All Recipes</H1>
+<%= render 'shared/title_pages', title: "All Recipes" %>
 <hr/>
 
-<%= will_paginate class: "center" %>
+<%= will_paginate class: "center pagination-lg" %>
 
 <% @recipes.each do |recipes| %>
 <div class="container">

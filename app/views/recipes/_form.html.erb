@@ -1,0 +1,28 @@
+<%= render 'shared/errors', obj: @recipe %>
+
+<div class="row">
+    
+    <div class="col-md-6 col-md-offset-3 center well">
+        <%= form_for(@recipe, html: { multipart: true }) do |f| %>
+        <%= f.label :name %>
+        <br>
+        <%= f.text_field :name %>
+        <br>
+        
+        <%= f.label :summary %>
+        <br>
+        <%= f.text_field :summary %>
+        <br>
+        <%= f.label :description %>
+        <br>
+        <%= f.text_area :description, rows: 9 %>
+        
+        <span class="picture">
+            <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+        </span>
+        <br>
+        <%= f.submit(@recipe.new_record? ? 'Create Recipe' : 'Edit Recipe', class: "btn btn-success") %>
+        
+    </div>
+</div>
+<% end %>

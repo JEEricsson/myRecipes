@@ -1,10 +1,6 @@
-<p>
-    <h1><% @recipe.name %></h1>
-</p>
+<%= render 'shared/title_pages', title: @recipe.name %>
 
- <h2 class="center">
-         <%= @recipe.name %>
-         </h2>
+ 
  <div class="row">
      <div class="col-md-2 col-md-offset-1">
          <%= gravatar_for @recipe.chef, size: 150 %>
@@ -36,6 +32,7 @@
            <% end %>
           </div>
            <%= link_to "Edit recipe", edit_recipe_path, class: "btn btn-small pull-right" %>
+           <br>
           
          </div>
         

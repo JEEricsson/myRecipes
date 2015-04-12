@@ -1,5 +1,5 @@
-$navbar-default-bg: rgba(224,186,79,0.7);
-$light-green: rgba(224,186,79,0.7);
+$navbar-default-bg: rgba(152,249,249,0.7);
+$light-green: rgba(152,249,249,0.7);
 $navbar-default-color: $light-green;
 
 @import "bootstrap-sprockets";
@@ -58,7 +58,7 @@ body {
 .footer{
     margin-top:30px;
     border-top: 1px solid #eaeaea;
-    background-color:rgba(224,186,79,0.7);
+    background-color:rgba(152,249,249,0.7);
     height:60px;
 }
 
@@ -82,11 +82,15 @@ body {
     font-size:1.2em;
 }
 .well{
-    background-color:rgba(224,186,79,0.7);
-
-    border-left: 1px solid #ededed;
     
+    border: none;
+    background: -webkit-linear-gradient (rgba(76,195,232,0.9), rgba(76,195,232,0.1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(76,195,232,0.9), rgba(76,195,232,0.1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(76,195,232,0.9), rgba(76,195,232,0.1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(76,195,232,0.9), rgba(76,195,232,0.1)); /* Standard syntax */
 }
+    
+
 
 .chef_info{
     margin-right: 20px;
